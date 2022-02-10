@@ -17,16 +17,14 @@ export const userConfig = {
     name: getRandomName(),
 };
 
-export const connectionConfig: AzureClientProps =  { connection: {
+export const connectionConfig: AzureClientProps = useAzure? { connection: {
     tenantId: "24045716-59f0-4cfb-aa78-0b05c21147b5",
     tokenProvider: new AzureFunctionTokenProvider("https://frs-brainstorm-tokenprovider.azurewebsites.net/api/jm-frs-tokenprovider", { userId: "test-user", userName: "Test User" }),
     orderer: "https://alfred.westus2.fluidrelay.azure.com",
     storage: "https://historian.westus2.fluidrelay.azure.com",
-}} 
-
-// : { connection: {
-//     tenantId: "24045716-59f0-4cfb-aa78-0b05c21147b5", //LOCAL_MODE_TENANT_ID,
-//     tokenProvider: new InsecureTokenProvider("861cb98ab994bf97ae85b9eed2f4872b", userConfig),
-//     orderer: "https://alfred.westus2.fluidrelay.azure.com",
-//     storage: "https://historian.westus2.fluidrelay.azure.com",
-// }} ;
+}} : { connection: {
+    tenantId: "24045716-59f0-4cfb-aa78-0b05c21147b5", //LOCAL_MODE_TENANT_ID,
+    tokenProvider: new InsecureTokenProvider("861cb98ab994bf97ae85b9eed2f4872b", userConfig),
+    orderer: "https://alfred.westus2.fluidrelay.azure.com",
+    storage: "https://historian.westus2.fluidrelay.azure.com",
+}} ;
