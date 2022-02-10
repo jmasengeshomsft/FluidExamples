@@ -19,7 +19,7 @@ export const userConfig = {
 
 export const connectionConfig: AzureClientProps =  { connection: {
     tenantId: "24045716-59f0-4cfb-aa78-0b05c21147b5",
-    tokenProvider: new AzureFunctionTokenProvider("https://frs-brainstorm-tokenprovider.azurewebsites.net/api/jm-frs-tokenprovider" + "/api/GetAzureToken", { userId: "test-user", userName: "Test User" }),
+    tokenProvider: new AzureFunctionTokenProvider("https://frs-brainstorm-tokenprovider.azurewebsites.net/api/jm-frs-tokenprovider", { userId: "test-user", userName: "Test User" }),
     orderer: "https://alfred.westus2.fluidrelay.azure.com",
     storage: "https://historian.westus2.fluidrelay.azure.com",
 }} 
