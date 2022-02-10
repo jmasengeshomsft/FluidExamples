@@ -23,8 +23,8 @@ export const connectionConfig: AzureClientProps = useAzure ? { connection: {
     orderer: "ENTER-ORDERER-URL-HERE",
     storage: "ENTER-STORAGE-URL-HERE",
 }} : { connection: {
-    tenantId: LOCAL_MODE_TENANT_ID,
-    tokenProvider: new InsecureTokenProvider("fooBar", userConfig),
-    orderer: "http://localhost:7070",
-    storage: "http://localhost:7070",
+    tenantId: "24045716-59f0-4cfb-aa78-0b05c21147b5", //LOCAL_MODE_TENANT_ID,
+    tokenProvider: new InsecureTokenProvider("861cb98ab994bf97ae85b9eed2f4872b", userConfig),
+    orderer: "https://alfred.westus2.fluidrelay.azure.com",
+    storage: "https://historian.westus2.fluidrelay.azure.com",
 }} ;
